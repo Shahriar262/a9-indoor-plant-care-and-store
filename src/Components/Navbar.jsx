@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
-import logoImg from '../assets/logo.jpg'
+import logoImg from "../assets/logo.jpg";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-[#FFFFFF] shadow-sm md:px-[120px]">
+    <div className="navbar bg-[#C8E6C9] shadow-sm md:px-[120px]">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -107,7 +107,7 @@ const Navbar = () => {
           <span className="font-semibold text-white">Login</span>
         </Link>
         <Link
-          to="/register"
+          to="/signup"
           className="btn w-[80px] md:w-[100px] h-40px bg-gradient-to-r from-green-700 to-emerald-500"
         >
           <span className="font-semibold text-white">Register</span>

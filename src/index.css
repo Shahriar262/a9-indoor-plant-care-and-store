@@ -1,7 +1,10 @@
-*{
-    font-family: "Inter", sans-serif;
+* {
+  font-family: "Inter", sans-serif;
 }
-
 
 @import "tailwindcss";
 @plugin "daisyui";
+
+.my-btn {
+  @apply btn w-full bg-gradient-to-r from-green-700 to-emerald-500 text-white font-semibold border-none hover:scale-105 transition-transform duration-200;
+}
