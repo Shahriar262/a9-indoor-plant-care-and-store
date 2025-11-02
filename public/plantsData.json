@@ -1,0 +1,74 @@
+[
+  {
+    "plantId": 1,
+    "plantName": "Snake Plant",
+    "category": "Air Purifier",
+    "price": 18,
+    "rating": 4.8,
+    "availableStock": 10,
+    "careLevel": "Easy",
+    "description": "A hardy plant that purifies indoor air and thrives in low light.",
+    "image": "https://i.postimg.cc/GhW3hQJG/snake-plant.png",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 2,
+    "plantName": "Peace Lily",
+    "category": "Flowering",
+    "price": 22,
+    "rating": 4.7,
+    "availableStock": 8,
+    "careLevel": "Moderate",
+    "description": "Elegant white blooms with lush green leaves; excellent for improving air quality.",
+    "image": "https://i.postimg.cc/J4twnTVF/peace-lily.png",
+    "providerName": "LeafyHaven Nursery"
+  },
+  {
+    "plantId": 3,
+    "plantName": "Spider Plant",
+    "category": "Hanging Plant",
+    "price": 15,
+    "rating": 4.6,
+    "availableStock": 12,
+    "careLevel": "Easy",
+    "description": "Low-maintenance plant that grows quickly and removes indoor toxins.",
+    "image": "https://i.postimg.cc/MpSmD2tV/spider-plant.png",
+    "providerName": "GreenNest Co."
+  },
+  {
+    "plantId": 4,
+    "plantName": "ZZ Plant",
+    "category": "Low Light",
+    "price": 25,
+    "rating": 4.9,
+    "availableStock": 6,
+    "careLevel": "Very Easy",
+    "description": "Glossy leaves that tolerate neglect and thrive in low-light spaces.",
+    "image": "https://i.postimg.cc/d0QDKhDC/zz-plant.png",
+    "providerName": "Oasis Garden Hub"
+  },
+  {
+    "plantId": 5,
+    "plantName": "Aloe Vera",
+    "category": "Succulent",
+    "price": 14,
+    "rating": 4.5,
+    "availableStock": 15,
+    "careLevel": "Easy",
+    "description": "Medicinal succulent known for its healing gel and minimal care needs.",
+    "image": "https://i.postimg.cc/XvV8S6RP/aloe-vera.png",
+    "providerName": "Botaniq Supplies"
+  },
+  {
+    "plantId": 6,
+    "plantName": "Fiddle Leaf Fig",
+    "category": "Decorative",
+    "price": 35,
+    "rating": 4.3,
+    "availableStock": 5,
+    "careLevel": "Difficult",
+    "description": "Large, dramatic leaves perfect for modern interiors; requires bright, indirect light.",
+    "image": "https://i.postimg.cc/85nQfZ6Q/fiddle-leaf-fig.png",
+    "providerName": "Nature’s Touch Studio"
+  }
+]
