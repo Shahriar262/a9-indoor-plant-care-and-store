@@ -8,7 +8,7 @@
     "availableStock": 10,
     "careLevel": "Easy",
     "description": "A hardy plant that purifies indoor air and thrives in low light.",
-    "image": "https://i.postimg.cc/GhW3hQJG/snake-plant.png",
+    "image": "https://i.ibb.co.com/LXZtkW84/Snake-Plant.webp",
     "providerName": "UrbanGreen Studio"
   },
   {
@@ -20,7 +20,7 @@
     "availableStock": 8,
     "careLevel": "Moderate",
     "description": "Elegant white blooms with lush green leaves; excellent for improving air quality.",
-    "image": "https://i.postimg.cc/J4twnTVF/peace-lily.png",
+    "image": "https://i.ibb.co.com/F4LLvpcV/LILY3-480x480.webp",
     "providerName": "LeafyHaven Nursery"
   },
   {
@@ -32,7 +32,7 @@
     "availableStock": 12,
     "careLevel": "Easy",
     "description": "Low-maintenance plant that grows quickly and removes indoor toxins.",
-    "image": "https://i.postimg.cc/MpSmD2tV/spider-plant.png",
+    "image": "https://i.ibb.co.com/YFpnr2gZ/BHG-spider-plant-c0e0fdd5ec6e4c1588998ce3167f6579.jpg",
     "providerName": "GreenNest Co."
   },
   {
@@ -44,7 +44,7 @@
     "availableStock": 6,
     "careLevel": "Very Easy",
     "description": "Glossy leaves that tolerate neglect and thrive in low-light spaces.",
-    "image": "https://i.postimg.cc/d0QDKhDC/zz-plant.png",
+    "image": "https://i.ibb.co.com/39bd56K5/zz-plant.webp",
     "providerName": "Oasis Garden Hub"
   },
   {
@@ -56,8 +56,8 @@
     "availableStock": 15,
     "careLevel": "Easy",
     "description": "Medicinal succulent known for its healing gel and minimal care needs.",
-    "image": "https://i.postimg.cc/XvV8S6RP/aloe-vera.png",
-    "providerName": "Botaniq Supplies"
+    "image": "https://i.ibb.co.com/1GvTRdcB/Aloe-Vera-Website-Front.webp",
+    "providerName": "Botanic Supplies"
   },
   {
     "plantId": 6,
@@ -68,7 +68,7 @@
     "availableStock": 5,
     "careLevel": "Difficult",
     "description": "Large, dramatic leaves perfect for modern interiors; requires bright, indirect light.",
-    "image": "https://i.postimg.cc/85nQfZ6Q/fiddle-leaf-fig.png",
+    "image": "https://i.ibb.co.com/pvgB1pXp/Bambino-FIddle-Leaf-FIg-3-BB-Copy.webp",
     "providerName": "Nature’s Touch Studio"
   }
 ]

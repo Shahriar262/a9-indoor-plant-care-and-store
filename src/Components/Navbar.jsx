@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
-import logoImg from "../assets/logo.jpg";
+import logoImg from "../assets/logo.png";
 
 const Navbar = () => {
   return (
@@ -25,8 +25,8 @@ const Navbar = () => {
             </svg>
           </div>
           <ul
-            tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            tabIndex='-1'
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[100] mt-3 w-52 p-2 shadow"
           >
             <li>
               <NavLink to="/" className="font-semibold text-[#000000e6]">
@@ -47,7 +47,11 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-1">
           <div>
-            <img src={logoImg} className="w-8 h-8" alt="Hero logo image" />
+            <img
+              src={logoImg}
+              className="w-8 h-8 bg-transparent"
+              alt="Hero logo image"
+            />
           </div>
           <div>
             <Link
