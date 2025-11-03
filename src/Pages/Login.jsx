@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
 import { Link } from "react-router";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const Login = () => {
-
-   const [show, setShow] = useState(false);
-   const [user, setUser] = useState(null);  
+  const [show, setShow] = useState(false);
+  const [user, setUser] = useState(null);
 
   return (
     <div className="flex justify-center items-center min-h-screen">
@@ -20,15 +21,11 @@ const Login = () => {
             />
             <h2 className="text-xl font-semibold">{user?.displayName}</h2>
             <p className="text-white/80">{user?.email}</p>
-            <button  className="my-btn">
-              Logout
-            </button>
+            <button className="my-btn">Logout</button>
           </div>
         ) : (
-          <form  className="space-y-5">
-            <h2 className="text-2xl font-semibold mb-2 text-center">
-             Login
-            </h2>
+          <form className="space-y-5">
+            <h2 className="text-2xl font-semibold mb-2 text-center">Login</h2>
 
             <div>
               <label className="block text-sm mb-1">Email</label>
@@ -58,11 +55,7 @@ const Login = () => {
               </span>
             </div>
 
-            <button
-              className="hover:underline cursor-pointer"
-             
-              type="button"
-            >
+            <button className="hover:underline cursor-pointer" type="button">
               Forget password?
             </button>
 
@@ -80,7 +73,6 @@ const Login = () => {
             {/* Google Signin */}
             <button
               type="button"
-              
               className="flex items-center justify-center gap-3 bg-transparent border text-gray-800 px-5 py-2 rounded-lg w-full font-semibold hover:bg-gray-200 transition-colors cursor-pointer"
             >
               <img
@@ -91,13 +83,10 @@ const Login = () => {
               Continue with Google
             </button>
 
-        
-            
-
             <p className="text-center text-sm text-black/80 mt-3">
               Don’t have an account?{" "}
               <Link
-                to="/register"
+                to="/auth/signup"
                 className="text-green-700 hover:text-emerald-500 underline"
               >
                 Register

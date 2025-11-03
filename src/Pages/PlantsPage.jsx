@@ -1,10 +1,10 @@
 import React from "react";
 import usePlants from "../hooks/usePlants";
 import PlantCard from "../Components/PlantCard";
+import LoadingSpinner from "../Components/LoadingSpinner";
 
 const PlantsPage = () => {
-
-  const {plants} = usePlants();
+  const { plants, loading } = usePlants();
 
   return (
     <div className="mt-10">
@@ -12,11 +12,15 @@ const PlantsPage = () => {
         Our All Plants
       </h1>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-6 grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
-            {plants.map((plant) => (
-              <PlantCard key={plant.id} plant={plant} />
-            ))}
-          </div>
+      {loading ? (
+        <LoadingSpinner />
+      ) : (
+        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-6 grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+          {plants.map((plant) => (
+            <PlantCard key={plant.id} plant={plant} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

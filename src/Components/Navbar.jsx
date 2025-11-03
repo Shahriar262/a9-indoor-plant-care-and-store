@@ -105,13 +105,13 @@ const Navbar = () => {
       </div>
       <div className="navbar-end flex items-center gap-[10px]">
         <Link
-          to="/login"
+          to="/auth/login"
           className="btn w-[77px] md:w-[100px] h-40px bg-gradient-to-r from-green-700 to-emerald-500"
         >
           <span className="font-semibold text-white">Login</span>
         </Link>
         <Link
-          to="/signup"
+          to="/auth/signup"
           className="btn w-[80px] md:w-[100px] h-40px bg-gradient-to-r from-green-700 to-emerald-500"
         >
           <span className="font-semibold text-white">Register</span>

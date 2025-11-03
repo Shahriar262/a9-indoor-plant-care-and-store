@@ -7,7 +7,7 @@
     "rating": 4.8,
     "availableStock": 10,
     "careLevel": "Easy",
-    "description": "A hardy plant that purifies indoor air and thrives in low light.",
+    "description": "A hardy and striking indoor plant that purifies the air naturally. The Snake Plant thrives in low light, tolerates neglect, and is perfect for beginners. Its tall, sword-like leaves add a modern touch to any living space while continuously filtering toxins from the air.",
     "image": "https://i.ibb.co.com/LXZtkW84/Snake-Plant.webp",
     "providerName": "UrbanGreen Studio"
   },
@@ -19,7 +19,7 @@
     "rating": 4.7,
     "availableStock": 8,
     "careLevel": "Moderate",
-    "description": "Elegant white blooms with lush green leaves; excellent for improving air quality.",
+    "description": "The Peace Lily is known for its elegant white blooms and lush, deep green leaves that instantly brighten any interior. It helps improve air quality by removing common household pollutants. With proper watering and indirect light, it can bloom multiple times a year, adding serenity to your home.",
     "image": "https://i.ibb.co.com/F4LLvpcV/LILY3-480x480.webp",
     "providerName": "LeafyHaven Nursery"
   },
@@ -31,7 +31,7 @@
     "rating": 4.9,
     "availableStock": 12,
     "careLevel": "Easy",
-    "description": "Low-maintenance plant that grows quickly and removes indoor toxins.",
+    "description": "The Spider Plant is a fast-growing and low-maintenance favorite that produces graceful arching leaves and baby offshoots. It effectively removes toxins like carbon monoxide and formaldehyde from indoor air. Perfect for hanging pots, shelves, or office desks to add a refreshing touch of green.",
     "image": "https://i.ibb.co.com/YFpnr2gZ/BHG-spider-plant-c0e0fdd5ec6e4c1588998ce3167f6579.jpg",
     "providerName": "GreenNest Co."
   },
@@ -43,7 +43,7 @@
     "rating": 4.6,
     "availableStock": 6,
     "careLevel": "Very Easy",
-    "description": "Glossy leaves that tolerate neglect and thrive in low-light spaces.",
+    "description": "The ZZ Plant is one of the toughest indoor plants available. With its glossy, waxy leaves and sculptural appearance, it brings elegance to any corner. It thrives even in low light and with minimal watering, making it a must-have for busy plant owners or office spaces.",
     "image": "https://i.ibb.co.com/39bd56K5/zz-plant.webp",
     "providerName": "Oasis Garden Hub"
   },
@@ -55,7 +55,7 @@
     "rating": 4.5,
     "availableStock": 15,
     "careLevel": "Easy",
-    "description": "Medicinal succulent known for its healing gel and minimal care needs.",
+    "description": "Aloe Vera is a soothing, medicinal succulent known for its healing gel used in skincare and home remedies. It thrives on neglect and loves bright sunlight. Its fleshy green leaves store water, making it one of the easiest plants to maintain while offering both beauty and benefits.",
     "image": "https://i.ibb.co.com/1GvTRdcB/Aloe-Vera-Website-Front.webp",
     "providerName": "Botanic Supplies"
   },
@@ -67,8 +67,56 @@
     "rating": 4.3,
     "availableStock": 5,
     "careLevel": "Difficult",
-    "description": "Large, dramatic leaves perfect for modern interiors; requires bright, indirect light.",
+    "description": "The Fiddle Leaf Fig is a statement plant with large, violin-shaped leaves that add a bold, modern touch to interiors. It thrives in bright, indirect light and appreciates consistent watering. While it requires a bit more attention, the stunning result is worth every bit of effort.",
     "image": "https://i.ibb.co.com/pvgB1pXp/Bambino-FIddle-Leaf-FIg-3-BB-Copy.webp",
     "providerName": "Nature’s Touch Studio"
+  },
+  {
+    "plantId": 7,
+    "plantName": "Rubber Plant",
+    "category": "Indoor Tree",
+    "price": 28,
+    "rating": 4.4,
+    "availableStock": 7,
+    "careLevel": "Moderate",
+    "description": "The Rubber Plant is a popular indoor tree with thick, glossy leaves that create an elegant and tropical vibe. It thrives in bright, indirect light and prefers moderate watering. Over time, it can grow into a stunning centerpiece for your living room or office space.",
+    "image": "https://i.ibb.co.com/tTb3VjJg/rubbertree-10.jpg",
+    "providerName": "Evergreen Living"
+  },
+  {
+    "plantId": 8,
+    "plantName": "Boston Fern",
+    "category": "Hanging Plant",
+    "price": 20,
+    "rating": 4.6,
+    "availableStock": 9,
+    "careLevel": "Moderate",
+    "description": "The Boston Fern features long, graceful fronds that love humidity and shade. Perfect for bathrooms or shaded balconies, it brings a lush and vibrant look to any space. Regular misting and indirect light keep this classic fern healthy and beautifully green all year round.",
+    "image": "https://i.ibb.co.com/5Wz17CP0/boston-fern.jpg",
+    "providerName": "Leaf & Bloom Co."
+  },
+  {
+    "plantId": 9,
+    "plantName": "Pothos Golden",
+    "category": "Vine Plant",
+    "price": 16,
+    "rating": 4.9,
+    "availableStock": 11,
+    "careLevel": "Very Easy",
+    "description": "Pothos Golden is a fast-growing trailing vine with heart-shaped, golden-green leaves. It thrives in low light and requires minimal watering, making it ideal for beginners. You can train it to climb, hang, or trail, giving any space a refreshing, lively atmosphere.",
+    "image": "https://i.ibb.co.com/Z6Q8jfdm/golden-pothos.webp",
+    "providerName": "UrbanRoots Garden"
+  },
+  {
+    "plantId": 10,
+    "plantName": "Jade Plant",
+    "category": "Succulent",
+    "price": 19,
+    "rating": 4.7,
+    "availableStock": 10,
+    "careLevel": "Easy",
+    "description": "The Jade Plant is a classic succulent symbolizing good luck and prosperity. It has thick, shiny leaves and a tree-like appearance that makes it a long-lasting indoor companion. Thriving in sunlight with minimal watering, it’s a timeless favorite among plant enthusiasts.",
+    "image": "https://i.ibb.co.com/3Y9SM4q5/jade-plant.webp",
+    "providerName": "SunnyPot Nursery"
   }
 ]

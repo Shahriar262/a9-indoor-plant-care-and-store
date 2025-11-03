@@ -6,6 +6,7 @@ import MyProfile from "../Pages/MyProfile";
 import PlantDetails from "../Pages/PlantDetails";
 import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
+import AuthLayout from "../Layout/AuthLayout";
 
 export const router = createBrowserRouter([
   {
@@ -24,16 +25,22 @@ export const router = createBrowserRouter([
         path: "/profile",
         element: <MyProfile />,
       },
+    ],
+  },
+  {
+    path: "/plants/:plantId",
+    element: <PlantDetails />,
+  },
+   {
+    path: "/auth",
+    element: <AuthLayout />,
+    children: [
       {
-        path: "/plants/:id",
-        element: <PlantDetails />,
-      },
-      {
-        path: "/login",
+        path: "/auth/login",
         element: <Login />,
       },
       {
-        path: "/signup",
+        path: "/auth/signup",
         element: <SignUp />,
       },
     ],
