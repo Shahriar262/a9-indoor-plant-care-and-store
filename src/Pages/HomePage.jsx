@@ -3,6 +3,7 @@ import HeroFramer from "../Components/HeroFramer";
 import usePlants from "../hooks/usePlants";
 import { Link } from "react-router";
 import PlantCard from "../Components/PlantCard";
+import PlantCareTips from "../Components/PlantCareTips";
 
 const HomePage = () => {
   const { plants } = usePlants();
@@ -31,6 +32,8 @@ const HomePage = () => {
               <span className="text-white font-semibold">Show All</span>
             </Link>
           </div>
+
+          <PlantCareTips />
     </div>
   );
 };
