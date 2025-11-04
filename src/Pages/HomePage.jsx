@@ -6,6 +6,7 @@ import PlantCard from "../Components/PlantCard";
 import PlantCareTips from "../Components/PlantCareTips";
 import GreenExperts from "../Components/GreenExperts";
 import LoadingSpinner from "../Components/LoadingSpinner";
+import PlantOfTheWeek from "../Components/PlantOfTheWeek";
 
 const HomePage = () => {
   const { plants, loading } = usePlants();
@@ -47,6 +48,12 @@ const HomePage = () => {
             Meet Our Green Experts
           </h2>
           <GreenExperts />
+          
+          {/* plant of the week section */}
+          <h1 className="text-4xl font-bold text-[#001931] text-center mb-4">
+            Plant of the Week
+          </h1>
+          <PlantOfTheWeek />
         </>
       )}
     </div>

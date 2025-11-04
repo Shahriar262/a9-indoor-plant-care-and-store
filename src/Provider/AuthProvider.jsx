@@ -4,6 +4,7 @@ import {
   getAuth,
   GoogleAuthProvider,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -32,9 +33,14 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-    const signInWithEmailFunc = () => {
+  const signInWithEmailFunc = () => {
     setLoading(true);
     return signInWithPopup(auth, googleProvider);
+  };
+
+  const sendPassResetEmailFunc = (email) => {
+    setLoading(true);
+    return sendPasswordResetEmail(auth, email);
   };
 
   const logOut = () => {
@@ -60,6 +66,7 @@ const AuthProvider = ({ children }) => {
     loading,
     setLoading,
     signInWithEmailFunc,
+    sendPassResetEmailFunc,
   };
 
   return <AuthContext value={authData}>{children}</AuthContext>;

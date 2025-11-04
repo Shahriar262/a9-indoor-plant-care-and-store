@@ -2,8 +2,6 @@ import React, { useContext, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
 import { Link, useNavigate } from "react-router";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
 import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
 

@@ -1,9 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from "react-router";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
 import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
 
@@ -15,7 +13,9 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  const { login, signInWithEmailFunc, setLoading } = useContext(AuthContext);
+  const { login, signInWithEmailFunc, setLoading, sendPassResetEmailFunc } = useContext(AuthContext);
+
+    const emailRef = useRef(null);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -53,6 +53,19 @@ const Login = () => {
       });
   };
 
+   const handleForgetPassword = () => {
+    console.log();
+    const email = emailRef.current.value;
+    sendPassResetEmailFunc(email)
+      .then((res) => {
+        setLoading(false);
+        toast.success("Check your email to reset password");
+      })
+      .catch((e) => {
+        toast.error(e.message);
+      });
+  };
+
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="w-full max-w-md backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-8">
@@ -76,6 +89,7 @@ const Login = () => {
               <input
                 type="email"
                 name="email"
+                ref={emailRef}
                 // value={email}
                 // onChange={(e) => setEmail(e.target.value)}
                 placeholder="example@email.com"
@@ -99,7 +113,7 @@ const Login = () => {
               </span>
             </div>
 
-            <button className="hover:underline cursor-pointer" type="button">
+            <button onClick={handleForgetPassword} className="hover:underline cursor-pointer" type="button">
               Forget password?
             </button>
 
