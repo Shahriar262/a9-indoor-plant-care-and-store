@@ -10,10 +10,12 @@ import { toast } from "react-toastify";
 const Login = () => {
   const [show, setShow] = useState(false);
   const [user, setUser] = useState(null);
-   const location = useLocation();
+  const location = useLocation();
+  console.log(location);
+
   const navigate = useNavigate();
 
-  const { login } = useContext(AuthContext);
+  const { login, signInWithEmailFunc, setLoading } = useContext(AuthContext);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -32,6 +34,22 @@ const Login = () => {
         const errorCode = error.code;
         const errorMessage = error.message;
         toast.error(errorCode);
+      });
+  };
+
+   const handleGoogleSignin = () => {
+    console.log("google signin");
+    signInWithEmailFunc()
+      .then((res) => {
+        console.log(res);
+        setLoading(false);
+        setUser(res.user);
+        navigate("/");
+        toast.success("Signin successful");
+      })
+      .catch((e) => {
+        console.log(e);
+        toast.error(e.message);
       });
   };
 
@@ -99,6 +117,7 @@ const Login = () => {
             {/* Google Signin */}
             <button
               type="button"
+              onClick={handleGoogleSignin}
               className="flex items-center justify-center gap-3 bg-transparent border text-gray-800 px-5 py-2 rounded-lg w-full font-semibold hover:bg-gray-200 transition-colors cursor-pointer"
             >
               <img

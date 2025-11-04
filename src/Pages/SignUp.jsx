@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { AuthContext } from "../Provider/AuthProvider";
@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 const SignUp = () => {
   const { createUser, setUser } = useContext(AuthContext);
   const [show, setShow] = useState(null);
-  
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -22,15 +22,18 @@ const SignUp = () => {
     const password = form.password.value;
 
     console.log(name, email, photo, password);
-    createUser(email, password).then((result) => {
-      const user = result.user;
-      // console.log(user);
-      toast.success("Registered Successfully")
-    }).catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    toast.error(errorCode)
-  });
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        toast.success("Registered Successfully");
+        navigate("/");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        toast.error(errorCode);
+      });
   };
 
   return (

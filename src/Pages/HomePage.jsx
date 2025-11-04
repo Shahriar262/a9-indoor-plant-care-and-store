@@ -25,7 +25,7 @@ const HomePage = () => {
           <h1 className="text-2xl md:text-4xl font-bold text-[#001931] text-center mt-20 mb-4">
             Top Rated Indoor Plants
           </h1>
-          <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-6 grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+          <div className="max-w-7xl mx-auto px-4 md:px-0  grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
             {topRatedPlants.map((plant) => (
               <PlantCard key={plant.id} plant={plant} />
             ))}
