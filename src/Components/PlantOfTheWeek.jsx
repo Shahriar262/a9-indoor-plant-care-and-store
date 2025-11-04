@@ -16,7 +16,7 @@ const PlantOfTheWeek = () => {
   const { plantName, image, description, careLevel, price, rating } = plant;
 
   return (
-    <div className="max-w-7xl mx-auto px-4 md:px-0 w-[35%] mt-10">
+    <div className="max-w-7xl mx-auto px-4 md:px-0 md:w-[35%] mt-10">
       <div className="bg-white rounded-xl shadow p-4 text-center">
         <img
           src={image}

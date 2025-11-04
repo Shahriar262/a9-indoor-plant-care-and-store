@@ -22,7 +22,7 @@ const PlantDetails = () => {
         <LoadingSpinner />
       ) : (
         <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row gap-10 mt-20">
-          <div className="card bg-[#FFFFFF] h-[620px]  w-10/11 mx-auto p-[10px] rounded-[4px] shadow-sm hover:scale-105 transition ease-in-out">
+          <div className="card bg-[#FFFFFF] min-h-[410px] md:w-10/11 mx-auto p-[10px] rounded-[4px] shadow-sm hover:scale-105 transition ease-in-out">
             <img src={image} className=" w-full h-90 rounded" alt="" />
 
             <h2 className="mt-4 font-bold text-2xl">{plantName}</h2>
