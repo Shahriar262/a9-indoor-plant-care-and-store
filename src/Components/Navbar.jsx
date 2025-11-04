@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router";
 import logoImg from "../assets/logo.png";
+import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogout = () => {
+    console.log("user trying to log out");
+    logOut()
+      .then(() => {
+        toast.success("You logged out successfully")
+      })
+      .catch((error) => {
+        console.log(error);
+        
+      });
+  };
+
   return (
     <div className="navbar bg-[#C8E6C9] shadow-sm md:px-[120px]">
       <div className="navbar-start">
@@ -25,7 +40,7 @@ const Navbar = () => {
             </svg>
           </div>
           <ul
-            tabIndex='-1'
+            tabIndex="-1"
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[100] mt-3 w-52 p-2 shadow"
           >
             <li>
@@ -104,19 +119,31 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end flex items-center gap-[10px]">
-        <Link
-          to="/auth/login"
-          className="btn w-[77px] md:w-[100px] h-40px bg-gradient-to-r from-green-700 to-emerald-500"
-        >
-          <span className="font-semibold text-white">Login</span>
-        </Link>
-        <Link
-          to="/auth/signup"
-          className="btn w-[80px] md:w-[100px] h-40px bg-gradient-to-r from-green-700 to-emerald-500"
-        >
-          <span className="font-semibold text-white">Register</span>
-        </Link>
+        {user ? (
+          <button
+            onClick={handleLogout}
+            className="btn w-[77px] md:w-[100px] h-40px bg-gradient-to-r from-green-700 to-emerald-500"
+          >
+            <span className="font-semibold text-white">Logout</span>
+          </button>
+        ) : (
+          <>
+            <Link
+              to="/auth/login"
+              className="btn w-[77px] md:w-[100px] h-40px bg-gradient-to-r from-green-700 to-emerald-500"
+            >
+              <span className="font-semibold text-white">Login</span>
+            </Link>
+            <Link
+              to="/auth/signup"
+              className="btn w-[80px] md:w-[100px] h-40px bg-gradient-to-r from-green-700 to-emerald-500"
+            >
+              <span className="font-semibold text-white">Register</span>
+            </Link>
+          </>
+        )}
       </div>
+      <div>{user && user.email}</div>
     </div>
   );
 };

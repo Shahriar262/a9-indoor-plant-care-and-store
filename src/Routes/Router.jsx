@@ -7,6 +7,7 @@ import PlantDetails from "../Pages/PlantDetails";
 import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
 import AuthLayout from "../Layout/AuthLayout";
+import PrivateRoute from "../Provider/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -29,9 +30,13 @@ export const router = createBrowserRouter([
   },
   {
     path: "/plants/:plantId",
-    element: <PlantDetails />,
+    element: (
+      <PrivateRoute>
+        <PlantDetails />
+      </PrivateRoute>
+    ),
   },
-   {
+  {
     path: "/auth",
     element: <AuthLayout />,
     children: [

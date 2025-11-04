@@ -1,26 +1,37 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
 import { Link } from "react-router";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
+  const { createUser, setUser } = useContext(AuthContext);
   const [show, setShow] = useState(null);
+  
 
-  const handleRegister = (e)=>{
+  const handleRegister = (e) => {
     e.preventDefault();
     console.log(e.target);
-    const form = e.target
+    const form = e.target;
     const name = form.name.value;
     const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-    
+
     console.log(name, email, photo, password);
-    
-    
-  }
+    createUser(email, password).then((result) => {
+      const user = result.user;
+      // console.log(user);
+      toast.success("Registered Successfully")
+    }).catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    toast.error(errorCode)
+  });
+  };
 
   return (
     <div className="flex justify-center items-center min-h-screen">

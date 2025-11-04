@@ -1,13 +1,39 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [show, setShow] = useState(false);
   const [user, setUser] = useState(null);
+   const location = useLocation();
+  const navigate = useNavigate();
+
+  const { login } = useContext(AuthContext);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log({ email, password });
+    login(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        toast.success("Logged In successfully");
+        navigate(`${location.state ? location.state : "/"}`);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        toast.error(errorCode);
+      });
+  };
 
   return (
     <div className="flex justify-center items-center min-h-screen">
@@ -24,7 +50,7 @@ const Login = () => {
             <button className="my-btn">Logout</button>
           </div>
         ) : (
-          <form className="space-y-5">
+          <form onSubmit={handleLogin} className="space-y-5">
             <h2 className="text-2xl font-semibold mb-2 text-center">Login</h2>
 
             <div>
