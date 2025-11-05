@@ -17,7 +17,7 @@ const PlantOfTheWeek = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-0 md:w-[35%] mt-10">
-      <div className="bg-white rounded-xl shadow p-4 text-center">
+      <div className="bg-white rounded-xl shadow p-4 text-center hover:shadow-lg transition transform hover:scale-105 duration-300">
         <img
           src={image}
           alt={plantName}

@@ -37,7 +37,7 @@ const MyProfile = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen">
-      <div className="w-full max-w-md bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl rounded-2xl p-8">
+      <div className="w-[95%] md:w-full max-w-md bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl rounded-2xl p-8">
         <h2 className="text-2xl font-semibold mb-6 text-center">My Profile</h2>
 
         <div className="flex flex-col items-center gap-4 mb-6">

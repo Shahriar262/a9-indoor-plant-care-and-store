@@ -46,7 +46,11 @@ const AuthProvider = ({ children }) => {
 
   const logOut = () => {
     setLoading(true);
-    return signOut(auth);
+    return signOut(auth)
+      .then(() => {
+        setUser(null);
+      })
+      .finally(() => setLoading(false));
   };
 
   const updateProfileFunc = (displayName, photoURL) => {

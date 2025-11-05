@@ -9,7 +9,7 @@ const GreenExperts = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
         {/* expert 1 */}
-        <div className="bg-white p-6 rounded-xl shadow text-center">
+        <div className="bg-white p-6 rounded-xl shadow text-center hover:shadow-lg transition transform hover:scale-105 duration-300">
           <div className="flex justify-center items-center">
             <img
               src={jenniferBrownImg}
@@ -18,29 +18,29 @@ const GreenExperts = () => {
             />
           </div>
           <h3 className="text-xl font-semibold my-2">Jennifer Brown</h3>
-          <p className="text-sm text-[#52796F]">
+          <p className="text-sm">
             “Succulents & botanical herbs specialist”
           </p>
         </div>
 
         {/* expert 2 */}
-        <div className="bg-white p-6 rounded-xl shadow text-center">
+        <div className="bg-white p-6 rounded-xl shadow text-center hover:shadow-lg transition transform hover:scale-105 duration-300">
           <div className="flex justify-center items-center">
             <img src={richardImg} className="w-15 h-15 rounded-full" alt="" />
           </div>
           <h3 className="text-xl font-semibold my-2">Richard Wilford</h3>
-          <p className="text-sm text-[#52796F]">
+          <p className="text-sm">
             “Indoor & alpine plant care specialist”
           </p>
         </div>
 
         {/* expert 3 */}
-        <div className="bg-white p-6 rounded-xl shadow text-center">
+        <div className="bg-white p-6 rounded-xl shadow text-center hover:shadow-lg transition transform hover:scale-105 duration-300">
           <div className="flex justify-center items-center">
             <img src={tomHartImg} className="w-15 h-15 rounded-full" alt="" />
           </div>
           <h3 className="text-xl font-semibold my-2">Tom Hart Dyke</h3>
-          <p className="text-sm text-[#52796F]">
+          <p className="text-sm">
             “Rare plant & indoor jungle adviser”
           </p>
         </div>

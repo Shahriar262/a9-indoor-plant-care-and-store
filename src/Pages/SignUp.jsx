@@ -6,7 +6,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
 
 const SignUp = () => {
-  const { createUser,  updateProfileFunc } = useContext(AuthContext);
+  const { createUser, updateProfileFunc } = useContext(AuthContext);
   const [show, setShow] = useState(null);
   const navigate = useNavigate();
 
@@ -18,6 +18,26 @@ const SignUp = () => {
     const photoURL = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
+
+
+    //Password validation
+    const uppercaseLetter = /[A-Z]/;
+    const lowercaseLetter = /[a-z]/;
+
+    if (!uppercaseLetter.test(password)) {
+      toast.error("Password must have at least one uppercase letter");
+      return;
+    }
+
+    if (!lowercaseLetter.test(password)) {
+      toast.error("Password must have at least one lowercase letter");
+      return;
+    }
+
+    if (password.length < 6) {
+      toast.error("Password must be at least 6 characters long");
+      return;
+    }
 
     // console.log(name, email, photo, password);
     createUser(email, password)
@@ -37,7 +57,7 @@ const SignUp = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        toast.error(errorCode);
+        toast.error(errorCode, errorMessage);
       });
   };
 
@@ -53,6 +73,7 @@ const SignUp = () => {
               type="text"
               name="name"
               placeholder="Your Name"
+              required
               className="input input-bordered w-full bg-white/20 placeholder-black/60 focus:outline-none focus:ring-2 focus:ring-green-400"
             />
           </div>
@@ -62,6 +83,7 @@ const SignUp = () => {
               type="text"
               name="photo"
               placeholder="Your photo URL here"
+              required
               className="input input-bordered w-full bg-white/20 placeholder-black/60 focus:outline-none focus:ring-2 focus:ring-green-400"
             />
           </div>
@@ -72,6 +94,7 @@ const SignUp = () => {
               type="email"
               name="email"
               placeholder="example@email.com"
+              required
               className="input input-bordered w-full bg-white/20 placeholder-black/60  focus:outline-none focus:ring-2 focus:ring-green-400"
             />
           </div>
@@ -82,6 +105,7 @@ const SignUp = () => {
               type={show ? "text" : "password"}
               name="password"
               placeholder="••••••••"
+              required
               className="input input-bordered w-full bg-white/20 placeholder-black/60 focus:outline-none focus:ring-2 focus:ring-green-400"
             />
             <span

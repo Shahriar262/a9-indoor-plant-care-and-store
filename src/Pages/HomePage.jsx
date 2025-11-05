@@ -7,6 +7,7 @@ import PlantCareTips from "../Components/PlantCareTips";
 import GreenExperts from "../Components/GreenExperts";
 import LoadingSpinner from "../Components/LoadingSpinner";
 import PlantOfTheWeek from "../Components/PlantOfTheWeek";
+import EcoDecor from "../Components/EcoDecor";
 
 const HomePage = () => {
   const { plants, loading } = usePlants();
@@ -54,6 +55,9 @@ const HomePage = () => {
             Plant of the Week
           </h1>
           <PlantOfTheWeek />
+
+          {/* Eco decor section */}
+          <EcoDecor />
         </>
       )}
     </div>

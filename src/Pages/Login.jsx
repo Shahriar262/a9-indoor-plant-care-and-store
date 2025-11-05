@@ -7,14 +7,18 @@ import { toast } from "react-toastify";
 
 const Login = () => {
   const [show, setShow] = useState(false);
-  const [user, setUser] = useState(null);
   const location = useLocation();
   console.log(location);
 
   const navigate = useNavigate();
 
-  const { login, signInWithEmailFunc, setLoading, sendPassResetEmailFunc } =
-    useContext(AuthContext);
+  const {
+    login,
+    signInWithEmailFunc,
+    setLoading,
+    sendPassResetEmailFunc,
+    setUser,
+  } = useContext(AuthContext);
 
   const emailRef = useRef(null);
 
@@ -32,9 +36,8 @@ const Login = () => {
         navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        toast.error(errorCode);
+        console.log(error);
+        toast.error("Invalid email or password");
       });
   };
 
@@ -55,8 +58,12 @@ const Login = () => {
   };
 
   const handleForgetPassword = () => {
-    console.log();
+    // console.log();
     const email = emailRef.current.value;
+    if (!email) {
+      toast.error("Please enter your email first");
+      return;
+    }
     sendPassResetEmailFunc(email)
       .then((res) => {
         setLoading(false);
@@ -79,8 +86,6 @@ const Login = () => {
               type="email"
               name="email"
               ref={emailRef}
-              // value={email}
-              // onChange={(e) => setEmail(e.target.value)}
               placeholder="example@email.com"
               className="input input-bordered w-full bg-white/20 placeholder-black/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
