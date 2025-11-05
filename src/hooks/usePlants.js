@@ -10,10 +10,10 @@ const usePlants = () => {
     setLoading(true);
     axios("../plantsData.json")
       .then((data) => {
-        setTimeout(() => setPlants(data.data), 800);
+        setTimeout(() => setPlants(data.data), 600);
       })
       .catch((err) => setError(err))
-      .finally(() => setTimeout(() => setLoading(false), 800));
+      .finally(() => setTimeout(() => setLoading(false), 600));
   }, []);
 
   return { plants, loading, error };
