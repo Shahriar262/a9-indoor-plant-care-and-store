@@ -50,7 +50,7 @@ const HomePage = () => {
           <GreenExperts />
           
           {/* plant of the week section */}
-          <h1 className="text-4xl font-bold text-[#001931] text-center mb-4">
+          <h1 className="text-2xl md:text-4xl font-bold text-[#001931] mt-10 text-center mb-6">
             Plant of the Week
           </h1>
           <PlantOfTheWeek />

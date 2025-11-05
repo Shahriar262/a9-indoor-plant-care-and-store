@@ -10,11 +10,10 @@ const Navbar = () => {
     console.log("user trying to log out");
     logOut()
       .then(() => {
-        toast.success("You logged out successfully")
+        toast.success("You logged out successfully");
       })
       .catch((error) => {
         console.log(error);
-        
       });
   };
 
@@ -120,12 +119,34 @@ const Navbar = () => {
       </div>
       <div className="navbar-end flex items-center gap-[10px]">
         {user ? (
-          <button
-            onClick={handleLogout}
-            className="btn w-[77px] md:w-[100px] h-40px bg-gradient-to-r from-green-700 to-emerald-500"
-          >
-            <span className="font-semibold text-white">Logout</span>
-          </button>
+          <div className="text-center space-y-3">
+            <button
+              className="btn"
+              popoverTarget="popover-1"
+              style={{ anchorName: "--anchor-1" } /* as React.CSSProperties */}
+            >
+              <img
+                src={user?.photoURL || "https://via.placeholder.com/88"}
+                className="h-[40px] w-[40px] rounded-full mx-auto"
+                alt=""
+              />
+            </button>
+
+            <div
+              className="dropdown menu w-52 rounded-box bg-base-100 shadow-sm"
+              popover="auto"
+              id="popover-1"
+              style={
+                { positionAnchor: "--anchor-1" } /* as React.CSSProperties */
+              }
+            >
+              <h2 className="text-xl font-semibold">{user?.displayName}</h2>
+
+              <button onClick={handleLogout} className="my-btn">
+                Logout
+              </button>
+            </div>
+          </div>
         ) : (
           <>
             <Link
@@ -143,7 +164,6 @@ const Navbar = () => {
           </>
         )}
       </div>
-      <div>{user && user.email}</div>
     </div>
   );
 };

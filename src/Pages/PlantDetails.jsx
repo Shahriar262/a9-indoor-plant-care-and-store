@@ -30,6 +30,7 @@ const PlantDetails = () => {
 
     if (!formData.name || !formData.email) {
       toast.error("Please fill the required field");
+      return;
     }
 
     toast.success("Consultation booked successfully");
@@ -69,7 +70,7 @@ const PlantDetails = () => {
               </h2>
 
               <div>
-                <label className="block text-sm mb-1">Name</label>
+                <label className="block text-sm mb-1 font-medium">Name</label>
                 <input
                   type="name"
                   name="name"
@@ -80,7 +81,7 @@ const PlantDetails = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm mb-1">Email</label>
+                <label className="block text-sm mb-1 font-medium">Email</label>
                 <input
                   type="email"
                   name="email"

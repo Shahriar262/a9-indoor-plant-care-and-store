@@ -8,6 +8,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import { app } from "../Firebase/firebase.config";
 
@@ -44,18 +45,24 @@ const AuthProvider = ({ children }) => {
   };
 
   const logOut = () => {
+    setLoading(true);
     return signOut(auth);
   };
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      setLoading(false);
-    });
-    return () => {
-      unsubscribe();
-    };
-  }, []);
+  const updateProfileFunc = (displayName, photoURL) => {
+    return updateProfile(auth.currentUser, { displayName, photoURL })
+      .then(() => {
+        setUser((prevUser) => ({
+          ...prevUser,
+          displayName,
+          photoURL,
+        }));
+      })
+      .catch((error) => {
+        console.error(error);
+        throw error;
+      });
+  };
 
   const authData = {
     user,
@@ -67,7 +74,18 @@ const AuthProvider = ({ children }) => {
     setLoading,
     signInWithEmailFunc,
     sendPassResetEmailFunc,
+    updateProfileFunc,
   };
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   return <AuthContext value={authData}>{children}</AuthContext>;
 };

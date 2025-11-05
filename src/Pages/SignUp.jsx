@@ -6,7 +6,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
 
 const SignUp = () => {
-  const { createUser, setUser } = useContext(AuthContext);
+  const { createUser,  updateProfileFunc } = useContext(AuthContext);
   const [show, setShow] = useState(null);
   const navigate = useNavigate();
 
@@ -14,18 +14,25 @@ const SignUp = () => {
     e.preventDefault();
     console.log(e.target);
     const form = e.target;
-    const name = form.name.value;
-    const photo = form.photo.value;
+    const displayName = form.name.value;
+    const photoURL = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
 
-    console.log(name, email, photo, password);
+    // console.log(name, email, photo, password);
     createUser(email, password)
       .then((result) => {
-        const user = result.user;
-        setUser(user);
-        toast.success("Registered Successfully");
-        navigate("/");
+        updateProfileFunc(displayName, photoURL)
+          .then(() => {
+            console.log(result);
+
+            toast.success("Registered Successfully");
+            navigate("/");
+          })
+          .catch((e) => {
+            console.log(e);
+            toast.error(e.message);
+          });
       })
       .catch((error) => {
         const errorCode = error.code;
