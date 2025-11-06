@@ -12,13 +12,12 @@ const SignUp = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    console.log(e.target);
+    // console.log(e.target);
     const form = e.target;
     const displayName = form.name.value;
     const photoURL = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-
 
     //Password validation
     const uppercaseLetter = /[A-Z]/;
@@ -44,7 +43,7 @@ const SignUp = () => {
       .then((result) => {
         updateProfileFunc(displayName, photoURL)
           .then(() => {
-            console.log(result);
+             console.log(result);
 
             toast.success("Registered Successfully");
             navigate("/");

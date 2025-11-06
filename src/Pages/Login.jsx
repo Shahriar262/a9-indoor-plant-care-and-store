@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 const Login = () => {
   const [show, setShow] = useState(false);
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
 
   const navigate = useNavigate();
 
@@ -27,7 +27,7 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log({ email, password });
+    // console.log({ email, password });
     login(email, password)
       .then((result) => {
         const user = result.user;
@@ -42,7 +42,7 @@ const Login = () => {
   };
 
   const handleGoogleSignin = () => {
-    console.log("google signin");
+    // console.log("google signin");
     signInWithEmailFunc()
       .then((res) => {
         console.log(res);
