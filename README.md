@@ -14,7 +14,7 @@
 Users can browse, buy, and learn how to take care of various indoor plants.  
 The goal is to make plant care simple and enjoyable while providing a trusted store for plant purchases.  
 
-**🌐 Live Demo:** [Pages](https://66b5f2ae.indoor-plant-care-and-store-sr262.pages.dev/)  
+**🌐 Live Demo:** [https://66b5f2ae.indoor-plant-care-and-store-sr262.pages.dev/](https://66b5f2ae.indoor-plant-care-and-store-sr262.pages.dev/)  
 
 ---
 
