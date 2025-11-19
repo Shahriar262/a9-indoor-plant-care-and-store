@@ -3,7 +3,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Shahriar262/a9-indoor-plant-care-and-store?style=for-the-badge) 
 ![GitHub contributors](https://img.shields.io/github/contributors/Shahriar262/a9-indoor-plant-care-and-store?style=for-the-badge) 
 ![GitHub stars](https://img.shields.io/github/stars/Shahriar262/a9-indoor-plant-care-and-store?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/Shahriar262/a9-indoor-plant-care-and-store?style=for-the-badge)
+
 ![GitHub issues](https://img.shields.io/github/issues/Shahriar262/a9-indoor-plant-care-and-store?style=for-the-badge)
 ![License](https://img.shields.io/github/license/Shahriar262/a9-indoor-plant-care-and-store?style=for-the-badge)
 
